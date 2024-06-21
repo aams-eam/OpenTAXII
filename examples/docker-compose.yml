@@ -21,14 +21,13 @@ services:
       DATABASE_NAME: opentaxii
       DATABASE_USER: user
       DATABASE_PASS: password
-      AUTH_DATABASE_HOST: authdb
-      AUTH_DATABASE_NAME: opentaxii1
-      AUTH_DATABASE_USER: user1
-      AUTH_DATABASE_PASS: password1
+      AUTH_DATABASE_HOST: db
+      AUTH_DATABASE_NAME: opentaxii
+      AUTH_DATABASE_USER: user
+      AUTH_DATABASE_PASS: password
     volumes:
       - ./:/input:ro
     ports:
       - 9000:9000
     links:
       - db:db
-      - authdb:authdb
