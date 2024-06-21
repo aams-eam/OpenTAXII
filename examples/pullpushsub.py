@@ -9,8 +9,8 @@ from time import sleep
 # Define your TAXII server and collection details
 OPENTAXII_URL = "http://localhost:9000/"
 TAXII2_SERVER = OPENTAXII_URL + "taxii2/"
-USERNAME = "user_write"
-PASSWORD = "user_write"
+USERNAME = "admin"
+PASSWORD = "admin"
 
 
 def pull_data(api_root_url, collection):

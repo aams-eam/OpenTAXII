@@ -8,7 +8,7 @@ return_server_error_details: no
 auth_api:
   class: opentaxii.auth.sqldb.SQLDatabaseAPI
   parameters:
-    db_connection: sqlite:////tmp/auth.db
+    db_connection: postgresql://user:password@db:5432/opentaxii
     create_tables: yes
     secret: SECRET-STRING-NEEDS-TO-BE-CHANGED
     token_ttl_secs: 3600
@@ -22,7 +22,7 @@ taxii1:
   persistence_api:
     class: opentaxii.persistence.sqldb.SQLDatabaseAPI
     parameters:
-      db_connection: sqlite:////tmp/data.db
+      db_connection: postgresql://user:password@db:5432/opentaxii
       create_tables: yes
 
 taxii2:
@@ -34,7 +34,7 @@ taxii2:
   persistence_api:
     class: opentaxii.persistence.sqldb.Taxii2SQLDatabaseAPI
     parameters:
-      db_connection: sqlite:////tmp/data2.db
+      db_connection: postgresql://user:password@db:5432/opentaxii
       create_tables: yes
 
 logging:
